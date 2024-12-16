@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisines and Points of Interest</title>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', Arial, sans-serif; /* Korean-inspired font */
+            background-color: #f0f0f0; /* Light grey background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: white;
+            background-color: #C60C30; /* Deep red (similar to the Korean flag) */
+            text-align: center;
+            padding: 40px 0;  /* Increased padding */
+            margin: 0;
+            font-size: 48px;  /* Larger font size */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Larger text shadow */
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #0056b3; /* Korean blue */
+            overflow: hidden;
+            margin-bottom: 30px; /* Increased margin */
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px; /* Increased margin */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 20px 30px; /* Increased padding */
+            display: inline-block;
+            font-size: 22px; /* Larger font size */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+            color: black;
+            transform: scale(1.15); /* Larger scale on hover */
+        }
+
+        /* Flexbox container for content and flag with a black border */
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;  /* Increased padding */
+            border: 3px solid #0056b3; /* Thicker blue border */
+            margin-top: 40px; /* Increased margin */
+            margin-bottom: 40px; /* Increased margin */
+            border-radius: 12px; /* Rounded corners */
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); /* Larger shadow */
+        }
+
+        .background-info {
+            flex: 1;
+            margin-right: 30px; /* Increased margin */
+            font-size: 22px; /* Larger font size */
+            line-height: 1.8; /* Slightly increased line height */
+            color: #333;
+        }
+
+        .korean-flag {
+            flex: 1;
+            max-width: 300px; /* Larger flag image */
+            height: auto;
+            border-radius: 6px;
+        }
+
+        /* Image of Korea */
+        .korea-image {
+            width: 100%;
+            height: auto;
+            max-height: 600px; /* Larger max-height */
+            object-fit: cover;
+            display: block;
+            margin-top: 30px; /* Increased margin */
+            border-radius: 10px; /* Larger border radius */
+        }
+
+        /* Map of Korea Section */
+        .map-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .map-section img {
+            max-width: 60%; /* Smaller map size (adjusted) */
+            height: auto;
+            border-radius: 10px; /* Rounded corners for map */
+        }
+
+        .map-section p {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px; /* Adjust font size for smaller screens */
+            }
+
+            nav ul li a {
+                font-size: 18px; /* Adjust font size for smaller screens */
+                padding: 15px 20px; /* Adjust padding */
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .background-info {
+                margin-right: 0;
+                margin-bottom: 30px; /* Increased margin */
+            }
+
+            .korean-flag {
+                max-width: 250px; /* Increased max-width for flag image */
+            }
+
+            .map-section img {
+                max-width: 80%; /* Responsive map size for smaller screens */
+            }
+        }
+
+        /* Footer Styling (Smaller) */
+        footer {
+            text-align: center;
+            padding: 8px 0; /* Reduced padding */
+            background-color: #333;
+            color: white;
+            font-size: 14px; /* Smaller font size */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Add a background pattern to the entire page */
+        .page-background {
+            background-image: url('korean-pattern.png'); /* Replace with a traditional Korean pattern */
+            background-repeat: repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1; /* Ensure background is behind content */
+        }
+    </style>
+</head>
+<body>
+    <div class="page-background"></div> <!-- Background Pattern -->
+
+    <h1>Korea</h1>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="cuisines.html">Cuisines</a></li>
+            <li><a href="points-of-interest.html">Points of Interest</a></li>
+        </ul>
+    </nav>
+
+    <!-- Image of Korea -->
+    <img src="korea.webp" alt="Korea" class="korea-image">
+
+    <!-- Flex container for background info and Korean flag inside a bordered box -->
+    <div class="flex-container">
+        <!-- Background Info Section -->
+        <div class="background-info">
+            <h2>What is Korea?</h2>
+            <p>South Korea, officially the Republic of Korea, is a country in East Asia, located on the southern half of the Korean Peninsula. Known for its rich culture, South Korea is home to modern cities, traditional palaces, and the Korean Wave (Hallyu), which has made its entertainment, music, and fashion famous worldwide. Visitors can experience stunning natural landscapes, ancient temples, and delicious cuisine.</p>
+        </div>
+
+        <!-- Korean Flag Section -->
+        <div class="korean-flag">
+            <img src="korean flag.png" alt="Korean Flag">
+        </div>
+    </div>
+
+    <!-- Map of Korea Section -->
+    <div class="map-section">
+        <img src="korea map.webp" alt="Map of Korea"> <!-- Replace with the actual map image -->
+        <p>Map of Korea</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Ian Kim</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+      /* 
+      A web page can load multiple external CSS files.
+      Move the internal CSS from page1.html (body yellow) into here.
+      Then link page1.html to page1.css in addition to style.css  */
+
+
+
+      /* Try doing a similar thing for the index.html page. Create a new file index.css which links to index.html and it contains the CSS to style the body aqua */

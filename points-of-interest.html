@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Points of Interest</title>
+    <style>
+        body {
+            font-family: 'Nanum Gothic', Arial, sans-serif; /* Korean-inspired font */
+            background-color: #f9f9f9; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: white;
+            background-color: #C60C30; /* Korean flag red */
+            text-align: center;
+            padding: 40px 0; /* Increased padding */
+            margin: 0;
+            font-size: 48px; /* Larger font size */
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            cursor: pointer; /* Makes the title appear clickable */
+        }
+
+        h1:hover {
+            background-color: #b0001a; /* Darker shade of red on hover */
+        }
+
+        /* Navbar styling */
+        nav {
+            background-color: #0056b3; /* Korean blue */
+            overflow: hidden;
+            margin-bottom: 30px; /* Increased margin */
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px; /* Increased margin */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 18px 25px; /* Increased padding */
+            display: inline-block;
+            font-size: 20px; /* Increased font size */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #ddd;
+            color: black;
+            transform: scale(1.15); /* Hover effect with scaling */
+        }
+
+        /* Flexbox container for each item with border */
+        .item-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #ffffff; /* White background for items */
+            padding: 30px; /* Increased padding */
+            border: 3px solid #0056b3; /* Korean blue border */
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 25px; /* Increased margin */
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+
+        .item-container:hover {
+            transform: translateY(-5px); /* Hover effect: slight upward movement */
+        }
+
+        .item-container img {
+            max-width: 250px; /* Increased image size */
+            height: auto;
+            margin-left: 30px; /* Increased margin */
+            border-radius: 10px; /* Rounded corners for the image */
+            transition: transform 0.3s ease;
+        }
+
+        .item-container img:hover {
+            transform: scale(1.15); /* Image zoom effect on hover */
+        }
+
+        .item-container div {
+            flex: 1;
+        }
+
+        .item-container h3 {
+            margin: 0;
+            color: #333;
+            font-size: 28px; /* Larger font size for headings */
+            font-weight: 600;
+        }
+
+        .item-container p {
+            font-size: 18px; /* Increased font size */
+            line-height: 1.7; /* Increased line height */
+            color: #555;
+        }
+
+        /* Footer Styling (Smaller) */
+        footer {
+            text-align: center;
+            padding: 6px 0; /* Reduced padding */
+            background-color: #333;
+            color: white;
+            font-size: 12px; /* Smaller font size */
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px; /* Adjust font size for smaller screens */
+            }
+
+            .item-container {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px; /* Adjust padding */
+            }
+
+            .item-container img {
+                max-width: 200px;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+
+            .item-container div {
+                margin-bottom: 20px;
+            }
+
+            nav ul li a {
+                font-size: 18px; /* Adjust font size for smaller screens */
+                padding: 12px 18px; /* Adjust padding */
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Clicking this will redirect to the homepage -->
+    <h1 onclick="window.location.href='index.html';">Back To Homepage</h1> <!-- Link to homepage (index.html) -->
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="cuisines.html">Cuisines</a></li>
+            <li><a href="points-of-interest.html">Points of Interest</a></li>
+        </ul>
+    </nav>
+
+    <h2 style="text-align: center; color: #333;">Discover the Best of Korea</h2>
+
+    <!-- Seoul -->
+    <div class="item-container">
+        <div>
+            <h3>Seoul</h3>
+            <p>Seoul is the bustling capital of South Korea, known for its modern architecture, vibrant nightlife, and cultural landmarks such as Gyeongbokgung Palace and Bukchon Hanok Village.</p>
+        </div>
+        <img src="Seoul Night.jpg" alt="Seoul">
+    </div>
+
+    <!-- Jeju Island -->
+    <div class="item-container">
+        <div>
+            <h3>Jeju Island</h3>
+            <p>Jeju Island is a popular vacation spot in South Korea, known for its beautiful volcanic landscapes, waterfalls, and the iconic Hallasan mountain.</p>
+        </div>
+        <img src="jeju island.jpg" alt="Jeju Island">
+    </div>
+
+    <!-- Lotte World -->
+    <div class="item-container">
+        <div>
+            <h3>Lotte World</h3>
+            <p>Lotte World is a large indoor amusement park in Seoul. It includes thrilling rides, a shopping mall, and an ice rink, making it one of the most popular destinations for families.</p>
+        </div>
+        <img src="lotte world.webp" alt="Lotte World">
+    </div>
+
+    <!-- Busan -->
+    <div class="item-container">
+        <div>
+            <h3>Busan</h3>
+            <p>Busan is a port city in the south of Korea, famous for its beaches, mountains, and temples. Haeundae Beach and the Jagalchi Fish Market are must-see spots.</p>
+        </div>
+        <img src="busan.jpg" alt="Busan">
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Ian Kim</p>
+    </footer>
+
+</body>
+</html>

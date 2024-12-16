@@ -1,0 +1,30 @@
+/* External CSS */
+body{
+  font-family:Arial;
+}
+a{
+  text-decoration:none;
+}
+
+/* Make #click_me look like a button */
+#click_me{
+  background-color:black;
+  padding:5px;
+  border-radius:5px;
+  color:white;
+}
+nav{
+  padding:5px;
+}
+nav a{
+  color:black;
+  margin:0 10px 0 10px;
+}
+/* Start here: Style the banner (black background, white text, padding 10px, centered text) */
+
+
+/* When user mouses over the click_me link, set text to white. Why does it not work? */
+
+/* How can you override CSS specificity (inline > id > class > element) ?
+   
+*/
